@@ -371,3 +371,4 @@ curl -X POST http://localhost:8088/api/checkout \
 1. **Gestão de Processos (Supervisor):** Em ambiente produtivo, configure o `supervisor` dentro do container para manter os workers rodando como daemons e reiniciá-los automaticamente em caso de exceções imprevistas.
 2. **Escalabilidade Horizontal:** É possível rodar múltiplas instâncias do mesmo comando `kafka:worker-*` simultaneamente. O Kafka dividirá as partições automaticamente entre os membros do mesmo `group.id`.
 3. **Persistência com Eloquent:** Dentro do bloco de processamento de cada worker, é recomendado utilizar `DB::transaction()` para atualizar os modelos do Eloquent antes de publicar o próximo evento.
+_
